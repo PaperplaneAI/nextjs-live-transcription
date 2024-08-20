@@ -9,19 +9,6 @@ import "./globals.css";
 
 import type { Metadata, Viewport } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
-const favorit = localFont({
-  src: "./fonts/ABCFavorit-Bold.woff2",
-  variable: "--font-favorit",
-});
-
-export const viewport: Viewport = {
-  themeColor: "#000000",
-  initialScale: 1,
-  width: "device-width",
-  // maximumScale: 1, hitting accessability
-};
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://aura-tts-demo.deepgram.com"),
   title: "Deepgram AI Agent",
@@ -41,8 +28,6 @@ export default function RootLayout({
     <html lang="en" className="h-dvh">
       <body
         className={`h-full dark ${classNames(
-          favorit.variable,
-          inter.className
         )}`}
       >
         <MicrophoneContextProvider>
